@@ -14,4 +14,5 @@ var smallerNumbersThanCurrent = function(nums) {
     return nums.map(n => nums.reduce((a, b) =>  a + (b > n ? 1 : 0), 0))
 };
 
+//第二遍
 console.log(smallerNumbersThanCurrent([8,1,2,2,3]))
