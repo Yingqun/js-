@@ -25,21 +25,21 @@
 
 
 
-var twoSum1 = function(nums, target) { 
-  let map = new Map();
-  for(let i = 0; i < nums.length; i++) {
-    if(map.has(target - nums[i])) {
-        return [map.get(target - nums[i]),  i]
-    }else {
-        map.set(nums[i], i)
-    }
-  }
-  return []
-};
-var twoSum2 = function(nums, target) { 
+// var twoSum1 = function(nums, target) { 
+//   let map = new Map();
+//   for(let i = 0; i < nums.length; i++) {
+//     if(map.has(target - nums[i])) {
+//         return [map.get(target - nums[i]),  i]
+//     }else {
+//         map.set(nums[i], i)
+//     }
+//   }
+//   return []
+// };
+var twoSum2 = function (nums, target) {
     let object = {}
-    for(let i = 0; i < nums.length; i++) {
-        if(object[target - nums[i]] !== undefined) {
+    for (let i = 0; i < nums.length; i++) {
+        if (object[target - nums[i]] !== undefined) {
             return [object[target - nums[i]], i]
         } else {
             object[nums[i]] = i
@@ -48,8 +48,20 @@ var twoSum2 = function(nums, target) {
     return []
 };
 
+//第三遍
+var twoSum1 = function (nums, target) {
+    let map = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        if (map.has(target - nums[i])) {
+            return [map.get(target - nums[i]), i]
+        } else {
+            map.set(nums[i], i)
+        }
+    }
+    return []
+}
 
 
-const nums = [2,7,11,15]
+const nums = [2, 7, 11, 15]
 console.log(twoSum1(nums, 9))
 console.log(twoSum2(nums, 9))
