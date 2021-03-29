@@ -44,6 +44,15 @@
 // }
 
 // 第四遍
+var smallerNumbersThanCurrent = function (nums) {
+  return nums.map(n => nums.reduce((a, b) => a += b < n ? 1 : 0, 0))
+}
+
+var smallerNumbersThanCurrent2 = function (nums) {
+  const sortArray = [...nums].sort((a, b) => b - a)
+  const map = new Map(sortArray.map((item, index) => [item, nums.length - index - 1]))
+  return nums.map(item => map.get(item))
+}
 
 
 console.log(smallerNumbersThanCurrent([8, 1, 2, 2, 3]))
