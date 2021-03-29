@@ -61,7 +61,7 @@
 //     return []
 // }
 
-// 第四遍
+// 第四遍 map
 var twoSum1 = function (nums, target) {
     let map = new Map()
     for (let i = 0; i < nums.length; i++) {

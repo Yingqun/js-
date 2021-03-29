@@ -5,14 +5,11 @@ var sortArray = function (nums) {
   for (let k = n - 1; k >= 1; k--) {
     for (let i = 0; i < k; i++) {
       if (nums[i] > nums[i + 1]) {
-        swap(i, i + 1)
+        var temp = nums[i]
+        nums[i] = nums[i + 1]
+        nums[i + 1] = temp
       }
     }
-  }
-  function swap(i, j) {
-    var temp = nums[i]
-    nums[i] = nums[j]
-    nums[j] = temp
   }
   return nums;
 };
