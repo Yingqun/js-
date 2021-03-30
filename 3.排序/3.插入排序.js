@@ -1,13 +1,26 @@
 // 第一遍 插入排序
+// var insertionSort = function (nums) {
+//   for (var i = 1; i < nums.length; i++) {
+//     var value = nums[i];
+//     var hole = i;
+//     while (hole > 0 && nums[hole - 1] > value) {
+//       nums[hole] = nums[hole - 1]
+//       hole--;
+//     }
+//     nums[hole] = value
+//   }
+//   return nums;
+// }
+
+// 第二遍
 var insertionSort = function (nums) {
   for (var i = 1; i < nums.length; i++) {
-    var value = nums[i];
-    var hole = i;
+    var value = nums[i], hole = i;
     while (hole > 0 && nums[hole - 1] > value) {
-      nums[hole] = nums[hole - 1]
+      nums[hole] = nums[hole - 1];
       hole--;
     }
-    nums[hole] = value
+    nums[hole] = value;
   }
   return nums;
 }
